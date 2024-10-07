@@ -21,7 +21,7 @@ The engine is designed to be modular and easily customizable, allowing developer
 
 ## How It Works
 
-- **WebAssembly (WASM)**: Provides high-speed execution of game logic and processing-heavy tasks by compiling C/C++/Rust code into a binary format that runs efficiently in the browser. (Note that rust is used out of the box, but any programming language compiled to wasm will work)
+- **WebAssembly (WASM)**: Provides high-speed execution of game logic and processing-heavy tasks by compiling Rust code into a binary format that runs efficiently in the browser. (Note that rust is used out of the box, but any programming language compiled to wasm will work)
   
 - **WebGL/WebGL2**: Handles the rendering pipeline, providing hardware-accelerated 2D graphics to achieve smooth visuals and animations. WebGL2 offers additional features like improved shader support and higher precision for advanced visual effects.
 
@@ -29,4 +29,4 @@ The engine is designed to be modular and easily customizable, allowing developer
 
 ## Contributors:
 
- - Marco A. Gomez (@dr-gomez)
+ - Marco A. Gomez - @dr-gomez
