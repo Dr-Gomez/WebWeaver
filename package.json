@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "rust": "cd src/wasm/rust && rustup target add wasm32-unknown-unknown && cargo build --release --target wasm32-unknown-unknown && cd ../../..",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
