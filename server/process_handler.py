@@ -1,18 +1,15 @@
-from multiprocessing import Array, Queue, Lock
-from mmap import mmap
-from .process_limits import get_process_limit
+from multiprocessing import Array, Queue, Lock, Pipe
+from os import cpu_count
+
+def get_process_limit():
+  return cpu_count() - 1
+
 
 def setup_processes(outfile):
   process_lim = get_process_limit()
-  print(process_lim)  
+  print(process_lim)
 
   lock = Lock()
   status = Array('c', process_lim)
   intructions = Queue()
-  
-  with open(outfile, 'wb') as file:
-    file.write(b'\x00')
-  
-  with open(outfile, 'r+b') as file:
-    shared = mmap(file.fileno(), 1)
-    shared.close()
+  parent_connection, child_connection = Pipe()
