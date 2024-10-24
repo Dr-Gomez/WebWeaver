@@ -1,6 +1,4 @@
 import "./style.css";
-import typescriptLogo from "./typescript.svg";
-import Compiler from "./compiler.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
@@ -9,5 +7,3 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     <button id="copy">Translate my code</button>
   </div>
 `;
-
-const compiler = new Compiler();
